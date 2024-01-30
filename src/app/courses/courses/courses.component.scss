@@ -1,3 +1,11 @@
 mat-card {
   margin: 20px
 }
+
+.loading-spineer {
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
