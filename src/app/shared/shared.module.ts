@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
 import { AppMaterialModule } from './app-material/app-material.module';
+import { CategoryPipe } from './pipes/category.pipe';
 
 
 
@@ -11,7 +12,8 @@ import { AppMaterialModule } from './app-material/app-material.module';
   imports: [
     CommonModule,
     ErrorDialogComponent,
-    AppMaterialModule
+    AppMaterialModule,
+    CategoryPipe
   ],
   exports: [ErrorDialogComponent]
 })

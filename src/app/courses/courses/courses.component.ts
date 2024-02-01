@@ -7,11 +7,12 @@ import { CoursesService } from '../services/courses.service';
 import { Observable, catchError, of } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
+import { CategoryPipe } from '../../shared/pipes/category.pipe';
 
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [AppMaterialModule, CommonModule],
+  imports: [AppMaterialModule, CommonModule, CategoryPipe],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss'
 })

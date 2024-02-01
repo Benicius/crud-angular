@@ -3,6 +3,7 @@
   <div *ngIf="courses$ | async as courses; else loading">
     <table mat-table [dataSource]="courses" class="mat-elevation-z8">
       <!-- Name Column -->
+
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef>Curso</th>
         <td mat-cell *matCellDef="let course">{{ course.name }}</td>
@@ -11,7 +12,11 @@
       <!-- Categoria Column -->
       <ng-container matColumnDef="category">
         <th mat-header-cell *matHeaderCellDef>Categoria</th>
-        <td mat-cell *matCellDef="let course">{{ course.category }}</td>
+        <td mat-cell *matCellDef="let course">{{ course.category }}
+          <mat-icon aria-hidden="false" aria-label="Categoria do Curso">
+            {{ course.category | category }}
+          </mat-icon>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
